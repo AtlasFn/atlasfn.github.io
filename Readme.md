@@ -1,2 +1,2 @@
 # atlasfn.github.io
-atlasfn.github.io
+AtlasFN Website
