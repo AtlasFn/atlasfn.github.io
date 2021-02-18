@@ -1,130 +1,80 @@
-
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
-    <title>AtlasFn</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/slideshow.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
-      rel="shortcut icon"
-      href="https://cdn.discordapp.com/attachments/808804473957908540/810981992966520841/AtlasFN_1080.png"
-      type="image/x-icon"
-    />
-    <link rel="stylesheet" href="style.css" type="text/css" />
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap"
       rel="stylesheet"
     />
-    <meta content="AtlasFn" property="og:title" />
 
-    <meta
-      content="AtlasFn is a private server."
-      property="og:description"
+    <!-- CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/flickity@2.2.2/dist/flickity.min.css"
     />
-
-    <meta content="AtlasFn" property="og:site_name" />
-
-    <!-- what does meta do it tells programs such as discord n skype what to do with it, with embeds and all OHHHHHHHHHHHHHHHHHHHHHHHHH -->
-
-    <meta
-      content="https://cdn.discordapp.com/attachments/808804473957908540/810981992966520841/AtlasFN_1080.png"
-      property="og:image"
-    />
+    <!-- JavaScript -->
+    <script src="https://unpkg.com/flickity@2.2.2/dist/flickity.pkgd.min.js"></script>
+    <!-- script for download-->
+    <script src="/scripts/dbtn.js"></script>
+    <title>AtlasFN</title>
   </head>
-  <body scroll="no" style="height: 5000px; overflow: hidden;">
-    <!-- with 200% you get double the normal size, ofc works xd -->
-    <script>
-      function GoTo(hash) {
-        location.hash = "#" + hash; // Allows for customization in the scrolling.
-      }
-
-      function OpenDiscord() {
-        window.open("https://discord.gg/EczvAJSEJv"); // Invite.
-      }
-
-      function downloadLauncherGithub() {
-        window.open("https://github.com/AtlasFn/backend-launcher/releases/latest"); // download
-      }
-    </script>
-    <div class="title">Welcome to AtlasFn</div>
-    <br /><br />
-    <div class="text">
-      AtlasFn is a private server, that lets you have <b>all</b> cosmetics in your locker
-      <br/>and a lobby bot<br/>
-      
-    </div>
-    <br /><br />
-    <button class="cool" id="downloadsButton" onclick="GoTo('downloads');">
-      <div class="buttontext">
-        <!-- works -->
-        Downloads
-        
-      </div>
-    </button>
-    <button class="cool" onclick="GoTo('credits');">
-      <!-- erase the hash -->
-      <div class="buttontext">
-        <!-- works -->
-        Credits
-      </div>
-    </button>
-    <button class="cool" id="discordButton" onclick="OpenDiscord();">
-      <div class="buttontext">
-        <!-- rip -->
-        Discord
-      </div>
-    </button>
-    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-    <div id="downloads"></div>
-    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-    <!-- that works i guess -->
-    <button class="cool" id="topButton" onclick="GoTo('');">
-      <!-- erase the hash -->
-      <div class="buttontext">
-        <!-- works -->
-        Go back
-      </div>
-    </button>
-    <div class="title">
-      Downloads
-    </div>
-    <div
-      class="box"
-      id="download1"
-      style="width: 175px; position: relative; top: 50px; overflow: hidden;"
-    >
-      <div class="text" style="padding: 0px;">
-        Launcher
-      </div>
-      <button style="font-weight: 600;" class="cool" id="downloadLauncher" onclick="downloadLauncherGithub();">
-        <div class="cool" style="font-weight: 600">
-          Download
+  <body>
+    <div class="container">
+      <div class="logo">
+        AtlasFN
+        <div class="hero-caption">
+          AtlasFN is a private server that lets you have access to all cosmetics
+          in your locker and a lobby bot
         </div>
-      </button>
-      <br /><br /><br />
-      <div class="text" style="padding: 0px;">
-        DLL
+        <button class="download" onclick="downloadLauncherGithub();">
+          Download Now
+        </button>
       </div>
-      <button style="font-weight: 600;" class="cool" id="downloadSource" onclick="">
-          Coming soon...
-      </button>
     </div>
-    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-    <div id="credits"></div>
-    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-    <button class="cool" id="topButtonCredits" onclick="GoTo('');">
-      <!-- erase the hash -->
-      <div class="buttontext">
-        <!-- works -->
-        Go back
+
+    <div class="features">
+      <h1 class="feature-text">Features</h1>
+      <div
+        class="carousel"
+        data-flickity
+        data-flickity-options='{ "wrapAround": true }'
+      >
+        <img
+          class="carousel-cell"
+          src="/img/carslimg1.png"
+          alt="Carousel Image 1"
+        />
+        <img
+          class="carousel-cell"
+          src="/img/carslimg2.png"
+          alt="Carousel Image 2"
+        />
+        <img
+          class="carousel-cell"
+          src="/img/carslimg3.png"
+          alt="Carousel Image 3"
+        />
       </div>
-    </button>
-    <div class="title">
-      Credits
+      <!---<div
+        class="carousel"
+        data-flickity
+        data-flickity-options='{ "wrapAround": true }'
+      >
+        <div class="carousel-cell"></div>
+        <div class="carousel-cell"></div>
+        <div class="carousel-cell"></div>
+        <div class="carousel-cell"></div>
+        <div class="carousel-cell"></div>
+      </div>--->
     </div>
-    <div class="text">
-      <b>Developers</b><br />
-      <a href="https://github.com/vinzyYT" style="text-decoration: none;">vinzy</a><br />
-      <a href="https://www.youtube.com/channel/UCo82UVWkq5wh9CefqyDdMMg" style="text-decoration: none;">CrankyJedi</a><br />
-      <a href="https://github.com/AlexDev404" style="text-decoration: none;">AlexDev404</a><br />
+    <!-- p class="gallery-caption">TEST</p--->
+    <div class="discord">Join our Discord Server!</div>
+    <div class="tutorial">Watch the Tutorial!</div>
+    <div class="downloads">Download our app!</div>
+    <div class="credits">Credits</div>
   </body>
 </html>
-
-<!-- scroll="no" overflow: hidden; -->
